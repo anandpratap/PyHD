@@ -11,14 +11,11 @@ def func2(x):
 
 def complex_func(x):
     if x > 12:
-        return x*x + np.cos(x*10) + np.exp(-x/10) + x/10.0
-    else:
-        return x*x + np.cos(x*10) + np.exp(-x/10)
+        return x*x + np.cos(x*10) + np.exp(-x/10) + x/10.0 + 1.0/x + x**x
+    else: 
+        return x*x + np.cos(x*10) + np.exp(-x/10) + 1.0/x + x**x
 
-import unittest
-
-
-class TestStringMethods(unittest.TestCase):
+class TestHDMethods(unittest.TestCase):
     def test_1(self):
         x = 10.0
         xh = hyperdual(x, 1.0, 1.0, 0.0)
@@ -31,7 +28,7 @@ class TestStringMethods(unittest.TestCase):
             self.assertEqual(f[2], fh.f12)
 
     def test_2(self):
-        x = 10.0
+        x = 1.1
         xh = hyperdual(x, 1.0, 1.0, 0.0)
         f = complex_func(x)
         h = 1e-6
