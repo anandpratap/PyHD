@@ -1,5 +1,5 @@
 /*
- * Hyperdual type for NumPy, developed from https://github.com/numpy/numpy-dtypes
+ * Hyperdual type for NumPy, developed from https://github.com/numpy/numpy-dtypes  Quaternion type for NumPy  Copyright (c) 2011 Martin Ling
  * Copyright (c) 2015 Anand Pratap Singh
  *
  * All rights reserved.
